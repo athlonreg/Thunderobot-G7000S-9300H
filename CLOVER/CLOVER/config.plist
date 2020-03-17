@@ -81,26 +81,6 @@
 					<key>Replace</key>
 					<data>WFBCUwA=</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q35 to XQ35</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1EzNQA=</data>
-					<key>Replace</key>
-					<data>WFEzNQA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q37 to XQ37</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1EzNwA=</data>
-					<key>Replace</key>
-					<data>WFEzNwA=</data>
-				</dict>
 			</array>
 		</dict>
 		<key>FixHeaders</key>
