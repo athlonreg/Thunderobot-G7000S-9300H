@@ -114,7 +114,7 @@
 				<key>Comment</key>
 				<string>I2C</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-I2CxConf.aml</string>
 			</dict>
@@ -122,7 +122,7 @@
 				<key>Comment</key>
 				<string>TPXX</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-OCI2C-TPXX-Thunderobot-G7000S.aml</string>
 			</dict>
@@ -335,7 +335,7 @@
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<integer>35</integer>
+				<integer>66</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -970,8 +970,10 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
+			<key>AdviseWindows</key>
+			<true/>
 			<key>MLB</key>
-			<string>C02824200J9JH4RCB</string>
+			<string>C02001600QXJH4RA8</string>
 			<key>ROM</key>
 			<data>JKQ0VkO6</data>
 			<key>SpoofVendor</key>
@@ -979,9 +981,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro15,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02WVQYDJHCC</string>
+			<string>C02C2020JHCC</string>
 			<key>SystemUUID</key>
-			<string>99D4531D-EEBE-4ADE-88D7-A05DD5400EA5</string>
+			<string>788E4C35-7A9B-4727-BFC1-FFF2EAA80080</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
