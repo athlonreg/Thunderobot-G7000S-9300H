@@ -112,19 +112,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>I2C</string>
+				<string>TPXX-GPI0</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
-				<string>SSDT-I2CxConf.aml</string>
+				<string>SSDT-OCI2C-TPXX-Thunderobot-G7000S-GPI0.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TPXX</string>
+				<string>TPXX-APIC</string>
 				<key>Enabled</key>
 				<false/>
 				<key>Path</key>
-				<string>SSDT-OCI2C-TPXX-Thunderobot-G7000S.aml</string>
+				<string>SSDT-OCI2C-TPXX-Thunderobot-G7000S-APIC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -216,6 +216,58 @@
 				<data></data>
 				<key>Replace</key>
 				<data>WFBCUwA=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Rename SSCN to XSCN</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>U1NDTg==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WFNDTg==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Rename FMCN to XMCN</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>Rk1DTg==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WE1DTg==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -341,6 +393,10 @@
 			<dict>
 				<key>AAPL02,override-no-connect</key>
 				<data>AP///////wAJ0eR4RVQAABAcAQOANR54Lq9FqVRQnCUVUFSla4DRwIHAgQCBgKnAswABAQEBAjqAGHE4LUBYLEUADyghAAAeAAAA/wBLNEowMTg5NjAxOQogAAAA/QAyTB5TEQAKICAgICAgAAAA/ABCZW5RIEdXMjQ3MAogATM=</data>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
+				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con2-busid</key>
 				<data>BgAAAA==</data>
 				<key>framebuffer-con2-enable</key>
@@ -856,9 +912,7 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array>
-			<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
-		</array>
+		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>HibernateMode</key>
@@ -868,7 +922,7 @@
 			<key>HideAuxiliary</key>
 			<true/>
 			<key>HideSelf</key>
-			<false/>
+			<true/>
 			<key>PickerAttributes</key>
 			<integer>0</integer>
 			<key>PickerAudioAssist</key>
@@ -880,7 +934,7 @@
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>10</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -971,7 +1025,7 @@
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
-			<true/>
+			<false/>
 			<key>MLB</key>
 			<string>C02001600QXJH4RA8</string>
 			<key>ROM</key>
