@@ -1,5 +1,11 @@
 #### OpenCore Update Record
 
+- 2020-03-30
+	1. Clean up useless ACPI files.
+
+	2. Fix CPU frequency fo Catalina 10.15.4.
+
+
 - 2020-03-25
 	1. Update the TPXX hot patch of GPI0 interrupt and ACPI interrupt, but the problem of APIC interrupt is still not fixed (no more repair, waste time), and it is not recommended to use APIC interrupt. (GPI0 interrupt patch and APIC interrupt patch cannot coexist. When GPI0 is turned on, APIC must be turned off. The same is true for APIC.)
 
@@ -18,4 +24,5 @@
 </br>
 
 #### Clover Update Record
-- None~
+
+- 2020-03-30: Refer to OpenCore update.
