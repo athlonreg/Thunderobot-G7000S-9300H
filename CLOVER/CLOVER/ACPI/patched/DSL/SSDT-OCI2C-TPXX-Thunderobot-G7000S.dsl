@@ -81,7 +81,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
 
                 If (\XXEN ())
                 {
-                    Return (PKGX (0x01B0, 0x01FB, 0x1E))
+                    Return (PKGX (432, 507, 30))
                 }
 
                 Return (PKGX (0x03F2, 0x043D, 0x62))
@@ -108,7 +108,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
 
                 If (\XXEN ())
                 {
-                    Return (PKGX (0x48, 0xA0, 0x1E))
+                    Return (PKGX (72, 160, 30))
                 }
 
                 Return (PKGX (0x0101, 0x012C, 0x62))
@@ -140,7 +140,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
                     "\\_SB.PCI0.GPI0", 0x00, ResourceConsumer, ,
                     )
                     {   // Pin list
-                        0x0107
+                        263
                     }
             })
             Name (SBFI, ResourceTemplate ()
