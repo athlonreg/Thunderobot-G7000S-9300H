@@ -1,5 +1,29 @@
 #### OpenCore更新记录
 
+- 2020-04-07
+	1. AppleALC更新到1.4.8官方发布版
+
+	2. VoodooInput更新到1.0.4官方发布版（VoodooInput已经合并到VoodooPS2插件中）
+
+	3. VoodooPS2更新到2.1.3官方发布版
+
+	4. VoodooI2C更新到2.3官方发布版
+
+	5. Lilu更新到1.4.3官方发布版
+
+	6. WhateverGreen更新到1.3.8官方发布版
+
+	7. VirtualSMC更新到1.1.2官方发布版
+
+	8. NVMeFix更新到1.0.2
+
+	9. 将CPUFriend和NoTouchID对接到Lilu 1.4.3新接口
+
+	10. IntelBluetoothFirmware和IntelBluetoothInjector更新到1.0.3
+
+	11. OpenCore更新到0.5.7官方发布版
+
+
 - 2020-03-30
 	1. 清除无用的ACPI文件。
 
@@ -23,6 +47,10 @@
 
 </br>
 
-#### OpenCore更新记录
+#### Clover更新记录
+
+- 2020-04-07
+	1. Clover引导更新到5108版本
+	2. 其它更新请参考OpenCore
 
 - 2020-03-30: 请参阅OpenCore更新。

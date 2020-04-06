@@ -6,29 +6,6 @@
 	<dict>
 		<key>DSDT</key>
 		<dict>
-			<key>Debug</key>
-			<false/>
-			<key>Fixes</key>
-			<dict>
-				<key>AddIMEI</key>
-				<false/>
-				<key>AddPNLF</key>
-				<false/>
-				<key>FixDisplay</key>
-				<false/>
-				<key>FixHDA</key>
-				<false/>
-				<key>FixHPET</key>
-				<false/>
-				<key>FixIPIC</key>
-				<false/>
-				<key>FixRTC</key>
-				<false/>
-				<key>FixSBUS</key>
-				<false/>
-				<key>FixShutdown</key>
-				<false/>
-			</dict>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -40,26 +17,6 @@
 					<data>UE5MRg==</data>
 					<key>Replace</key>
 					<data>WE5MRg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q11 to XQ11</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExMQ==</data>
-					<key>Replace</key>
-					<data>WFExMQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q12 to XQ12</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExMg==</data>
-					<key>Replace</key>
-					<data>WFExMg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -81,8 +38,55 @@
 					<key>Replace</key>
 					<data>WFBCUwA=</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename SSCN to XSCN</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U1NDTg==</data>
+					<key>Replace</key>
+					<data>WFNDTg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename FMCN to XMCN</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>Rk1DTg==</data>
+					<key>Replace</key>
+					<data>WE1DTg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_Q11 to XQ11</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1ExMQ==</data>
+					<key>Replace</key>
+					<data>WFExMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_Q12 to XQ12</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1ExMg==</data>
+					<key>Replace</key>
+					<data>WFExMg==</data>
+				</dict>
 			</array>
 		</dict>
+		<key>DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
+			</dict>
+		</array>
 		<key>FixHeaders</key>
 		<true/>
 	</dict>
@@ -110,17 +114,19 @@
 	<dict>
 		<key>Audio</key>
 		<dict>
+			<key>AFGLowPowerState</key>
+			<false/>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
+		<key>Inject</key>
+		<false/>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
 				<key>layout-id</key>
-				<integer>35</integer>
+				<integer>66</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -137,7 +143,7 @@
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
 				<key>framebuffer-unifiedmem</key>
-				<data>AAAAgA==</data>
+				<data>AAAAwA==</data>
 			</dict>
 		</dict>
 	</dict>
@@ -148,17 +154,24 @@
 			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
+		<key>Mouse</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+		</dict>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
 			<true/>
 			<key>Legacy</key>
 			<false/>
+			<key>Linux</key>
+			<true/>
 			<key>Tool</key>
 			<false/>
 		</dict>
 		<key>Theme</key>
-		<string>Simple</string>
+		<string>SimpleThemeDark</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -230,17 +243,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>01/05/2020</string>
+		<string>03/07/2020</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP161.88Z.F000.B00.2001052241</string>
+		<string>MBP161.88Z.F000.B00.2003070323</string>
 		<key>Board-ID</key>
 		<string>Mac-E1008331FDC96864</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02053130QXN9PRJA</string>
+		<string>C029302704NN9PR8C</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -252,7 +265,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>1037.80.41.0.0</string>
+		<string>1037.100.355.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -265,16 +278,14 @@
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
-		<key>NoRomInfo</key>
-		<true/>
 		<key>PlatformFeature</key>
 		<string>0x02</string>
 		<key>ProductName</key>
 		<string>MacBookPro16,1</string>
 		<key>SerialNumber</key>
-		<string>C02DXVYQMD6N</string>
+		<string>C02Z4TYMMD6N</string>
 		<key>SmUUID</key>
-		<string>8CF916D3-BAC0-4121-88C7-863E889C0FB3</string>
+		<string>92B1138E-0639-4FB4-A409-8477A40E9131</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
