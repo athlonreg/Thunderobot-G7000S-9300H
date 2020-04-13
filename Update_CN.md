@@ -1,5 +1,12 @@
 #### OpenCore更新记录
 
+- 2020-04-13
+	1. VoodooI2C更新到2.4版（VoodooInput集成到VoodooI2C插件中）
+
+	2. 更新VirtualSMC全家桶
+
+	3. OpenCore更新到0.5.8自编译版
+
 - 2020-04-07
 	1. AppleALC更新到1.4.8官方发布版
 

@@ -1,5 +1,12 @@
 #### OpenCore Update Record
 
+- 2020-04-13
+	1. VoodooI2C updated to 2.4 (VoodooInput is integrated into the VoodooI2C plug-in)
+
+	2. Update VirtualSMC family bucket
+
+	3. Update OpenCore to 0.5.8 previous version
+
 - 2020-04-07
 	1. Update AppleALC to 1.4.8
 

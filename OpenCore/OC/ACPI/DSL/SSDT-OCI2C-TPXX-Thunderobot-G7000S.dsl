@@ -15,48 +15,45 @@
  *============================= *
  *
  */
-DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
+DefinitionBlock("", "SSDT", 2, "ACDT", "I2C-TPXX", 0)
 {
-    External (_SB_.GNUM, MethodObj)    // 1 Arguments
-    External (_SB_.INUM, MethodObj)    // 1 Arguments
-    External (_SB_.PCI0.GPI0._HID, MethodObj)    // 0 Arguments
-    External (_SB_.PCI0.HIDD, MethodObj)    // 5 Arguments
-    External (_SB_.PCI0.HIDG, IntObj)
-    External (_SB_.PCI0.I2C0, DeviceObj)
-    External (_SB_.PCI0.I2C1, DeviceObj)
-    External (_SB_.PCI0.I2C0.XMCN, MethodObj)    // 0 Arguments
-    External (_SB_.PCI0.I2C1.XMCN, MethodObj)    // 0 Arguments
-    External (_SB_.PCI0.I2C0.XSCN, MethodObj)    // 0 Arguments
-    External (_SB_.PCI0.I2C1.XSCN, MethodObj)    // 0 Arguments
-    External (_SB_.PCI0.TP7D, MethodObj)    // 6 Arguments
-    External (_SB_.PCI0.TP7G, IntObj)
-    External (_SB_.SHPO, MethodObj)    // 2 Arguments
-    External (FMD0, IntObj)
-    External (FMD1, IntObj)
-    External (FMH0, IntObj)
-    External (FMH1, IntObj)
-    External (FML0, IntObj)
-    External (FML1, IntObj)
-    External (GPDI, FieldUnitObj)
-    External (SSD0, IntObj)
-    External (SSD1, IntObj)
-    External (SSH0, IntObj)
-    External (SSH1, IntObj)
-    External (SSL0, IntObj)
-    External (SSL1, IntObj)
-    External (TPDB, FieldUnitObj)
-    External (TPDH, FieldUnitObj)
-    External (TPDM, FieldUnitObj)
-    External (TPDS, FieldUnitObj)
+    
+    // TPXX
+    External(_SB.PCI0.I2C0, DeviceObj)
+    External(TPDM, FieldUnitObj)
+    External(GPDI, FieldUnitObj)
+    External(TPDT, FieldUnitObj)
+    External(TPDH, FieldUnitObj)
+    External(TPDS, FieldUnitObj)
+    External(TPDB, FieldUnitObj)
+    External(_SB.SHPO, MethodObj)
+    External(_SB.GNUM, MethodObj)
+    External(_SB.INUM, MethodObj)
+    External(_SB.PCI0.HIDD, MethodObj)
+    External(_SB.PCI0.TP7D, MethodObj)
+    External(_SB.PCI0.HIDG, IntObj)
+    External(_SB.PCI0.TP7G, IntObj)
+    
+    // I2C Config
+    External (_SB.PCI0.GPI0._HID, MethodObj)
+    External (_SB_.PCI0.I2C0.XMCN, MethodObj)
+    External (_SB_.PCI0.I2C0.XSCN, MethodObj) 
     External (USTP, FieldUnitObj)
-
+    External (FMD0, IntObj)
+    External (FMH0, IntObj)
+    External (FML0, IntObj)
+    External (SSD0, IntObj)
+    External (SSH0, IntObj)
+    External (SSL0, IntObj)
+    
     Scope (\)
     {
         If (_OSI ("Darwin"))
         {
+            TPDT = 0
             Method (XXEN, 0, NotSerialized)
             {
-                If (((\_SB.PCI0.GPI0._HID () == "INT344B") || (\_SB.PCI0.GPI0._HID () == "INT345D")))
+                If ((\_SB.PCI0.GPI0._HID() == "INT344B") || (\_SB.PCI0.GPI0._HID() == "INT345D"))
                 {
                     Return (One)
                 }
@@ -79,7 +76,8 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
             }
         }
     }
-
+    
+    //path:_SB.PCI0.I2C0
     Scope (_SB.PCI0.I2C0)
     {
         Method (SSCN, 0, NotSerialized)
@@ -135,10 +133,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
 
             Return (Zero)
         }
-    }
-
-    Scope (_SB.PCI0.I2C0)
-    {
+        
         Device (TPXX)
         {
             Name (HID2, Zero)
@@ -155,7 +150,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
                     "\\_SB.PCI0.GPI0", 0x00, ResourceConsumer, ,
                     )
                     {   // Pin list
-                        263
+                        0x0107
                     }
             })
             Name (SBFI, ResourceTemplate ()
@@ -181,8 +176,8 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
                 If (One)
                 {
                     _HID = "SYNA1202"
-                    HID2 = TPDH /* External reference */
-                    BADR = TPDB /* External reference */
+                    HID2 = TPDH /* \TPDH */
+                    BADR = TPDB /* \TPDB */
                     If ((TPDS == Zero))
                     {
                         SPED = 0x000186A0
@@ -219,7 +214,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
 
                 Return (Buffer (One)
                 {
-                     0x00
+                     0x00                                             // .
                 })
             }
 
@@ -237,67 +232,10 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "I2C-TPXX", 0x00000000)
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
+                Return (ConcatenateResTemplate (SBFB, SBFG)) // Working mode: GPIO
                 // Return (ConcatenateResTemplate (SBFB, SBFI)) // Working mode: APIC
-                Return (ConcatenateResTemplate (SBFB, SBFG)) // Working mode: GPI0
             }
         }
     }
-
-    Scope (_SB.PCI0.I2C1)
-    {
-        Method (SSCN, 0, NotSerialized)
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (((CondRefOf (SSH1) && CondRefOf (SSL1)) && CondRefOf (SSD1)))
-                {
-                    Return (PKGX (SSH1, SSL1, SSD1))
-                }
-
-                If (\XXEN ())
-                {
-                    Return (PKGX (0x0210, 0x0280, 0x1E))
-                }
-
-                Return (PKGX (0x03F2, 0x043D, 0x62))
-            }
-            ElseIf (CondRefOf (\_SB.PCI0.I2C1.XSCN))
-            {
-                If (USTP)
-                {
-                    Return (\_SB.PCI0.I2C1.XSCN ())
-                }
-            }
-        
-            Return (Zero)
-        }
-
-        Method (FMCN, 0, NotSerialized)
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (((CondRefOf (FMH1) && CondRefOf (FML1)) && CondRefOf (FMD1)))
-                {
-                    Return (PKGX (FMH1, FML1, FMD1))
-                }
-
-                If (\XXEN ())
-                {
-                    Return (PKGX (0x80, 0xA0, 0x1E))
-                }
-
-                Return (PKGX (0x0101, 0x012C, 0x62))
-            }
-            ElseIf (CondRefOf (\_SB.PCI0.I2C1.XMCN))
-            {
-                If (USTP)
-                {
-                    Return (\_SB.PCI0.I2C1.XMCN ())
-                }
-            }
-
-            Return (Zero)
-        }
-    }
-
 }
+//EOF
