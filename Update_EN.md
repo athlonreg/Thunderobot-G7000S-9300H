@@ -5,7 +5,9 @@
 
 	2. Update VirtualSMC family bucket
 
-	3. Update OpenCore to 0.5.8 previous version
+	3. Update TPXX hotpatch
+	
+	4. Update OpenCore to 0.5.8 previous version
 
 - 2020-04-07
 	1. Update AppleALC to 1.4.8

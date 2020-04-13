@@ -5,7 +5,9 @@
 
 	2. 更新VirtualSMC全家桶
 
-	3. OpenCore更新到0.5.8自编译版
+	3. 更新TPXX热补丁
+
+	4. OpenCore更新到0.5.8自编译版
 
 - 2020-04-07
 	1. AppleALC更新到1.4.8官方发布版
