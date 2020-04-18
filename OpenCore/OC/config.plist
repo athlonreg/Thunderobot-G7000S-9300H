@@ -8,6 +8,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>NDGP</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-NDGP.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>ALS0</string>
 				<key>Enabled</key>
 				<true/>
@@ -390,13 +398,43 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,31,3</string>
+				<key>device_type</key>
+				<string>Audio device</string>
 				<key>layout-id</key>
 				<integer>66</integer>
+				<key>model</key>
+				<string>Cannon Lake PCH cAVS</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x6)/Pci(0x0,0x1)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,29,6/0,1</string>
+				<key>built-in</key>
+				<data>AAAAAQ==</data>
+				<key>device_type</key>
+				<string>Ethernet controller</string>
+				<key>model</key>
+				<string>RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x5)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,29,5/0,0</string>
+				<key>device_type</key>
+				<string>Network controller</string>
+				<key>model</key>
+				<string>Wi-Fi 6 AX200</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
 				<key>AAPL02,override-no-connect</key>
 				<data>AP///////wAJ0eR4RVQAABAcAQOANR54Lq9FqVRQnCUVUFSla4DRwIHAgQCBgKnAswABAQEBAjqAGHE4LUBYLEUADyghAAAeAAAA/wBLNEowMTg5NjAxOQogAAAA/QAyTB5TEQAKICAgICAgAAAA/ABCZW5RIEdXMjQ3MAogATM=</data>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
 				<key>enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
@@ -979,7 +1017,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 -wegnoegpu</string>
+				<string>keepsyms=1 debug=0x100</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1006,7 +1044,7 @@
 			<key>AdviseWindows</key>
 			<true/>
 			<key>MLB</key>
-			<string>C02820701QXJH4RCB</string>
+			<string>C02826100QXJH4R8C</string>
 			<key>ROM</key>
 			<data>JKQ0VkO6</data>
 			<key>SpoofVendor</key>
@@ -1014,9 +1052,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro15,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02C2020JHCC</string>
+			<string>C02WXWYAJHCC</string>
 			<key>SystemUUID</key>
-			<string>788E4C35-7A9B-4727-BFC1-FFF2EAA80080</string>
+			<string>BEB8BC3C-201F-40AA-ABBE-3F0A7D65E93B</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
