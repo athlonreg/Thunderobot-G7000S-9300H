@@ -8,7 +8,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>NDGP</string>
+				<string>Disable-NvidiaGPU</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -125,22 +125,6 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-OCI2C-TPXX-Thunderobot-G7000S.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>UIAC</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-UIAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-USBX.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -398,43 +382,29 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,3</string>
-				<key>device_type</key>
-				<string>Audio device</string>
 				<key>layout-id</key>
 				<integer>66</integer>
-				<key>model</key>
-				<string>Cannon Lake PCH cAVS</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1D,0x6)/Pci(0x0,0x1)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,29,6/0,1</string>
 				<key>built-in</key>
 				<data>AAAAAQ==</data>
-				<key>device_type</key>
-				<string>Ethernet controller</string>
 				<key>model</key>
 				<string>RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1D,0x5)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,29,5/0,0</string>
-				<key>device_type</key>
-				<string>Network controller</string>
+				<key>built-in</key>
+				<data>AAAAAQ==</data>
 				<key>model</key>
 				<string>Wi-Fi 6 AX200</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,2,0</string>
-				<key>AAPL02,override-no-connect</key>
-				<data>AP///////wAJ0eR4RVQAABAcAQOANR54Lq9FqVRQnCUVUFSla4DRwIHAgQCBgKnAswABAQEBAjqAGHE4LUBYLEUADyghAAAeAAAA/wBLNEowMTg5NjAxOQogAAAA/QAyTB5TEQAKICAgICAgAAAA/ABCZW5RIEdXMjQ3MAogATM=</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
+				<key>AAPL,ig-platform-id</key>
+				<data>CQClPg==</data>
+				<key>device-id</key>
+				<data>mz4AAA==</data>
 				<key>enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
@@ -447,16 +417,24 @@
 				<data>AgAAAA==</data>
 				<key>framebuffer-con2-type</key>
 				<data>AAgAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAwA==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 630 (Mobile)</string>
+				<key>AAPL02,override-no-connect</key>
+				<data>AP///////wAJ0eR4RVQAABAcAQOANR54Lq9FqVRQnCUVUFSla4DRwIHAgQCBgKnAswABAQEBAjqAGHE4LUBYLEUADyghAAAeAAAA/wBLNEowMTg5NjAxOQogAAAA/QAyTB5TEQAKICAgICAgAAAA/ABCZW5RIEdXMjQ3MAogATM=</data>
 			</dict>
 		</dict>
+		<key>Block</key>
+		<dict/>
 	</dict>
 	<key>Kernel</key>
 	<dict>
@@ -704,38 +682,6 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>IntelBluetoothFirmware.kext</string>
-				<key>Comment</key>
-				<string>IntelBluetoothFirmware</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IntelBluetoothFirmware</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>IntelBluetoothInjector.kext</string>
-				<key>Comment</key>
-				<string>IntelBluetoothInjector</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext</string>
 				<key>Comment</key>
 				<string>PS2Controller</string>
@@ -878,6 +824,54 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>IntelBluetoothFirmware.kext</string>
+				<key>Comment</key>
+				<string>IntelBluetoothFirmware</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IntelBluetoothFirmware</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>IntelBluetoothInjector.kext</string>
+				<key>Comment</key>
+				<string>IntelBluetoothInjector</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>USBPorts.kext</string>
+				<key>Comment</key>
+				<string>USBPorts</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array/>
@@ -903,6 +897,8 @@
 			<key>CustomSMBIOSGuid</key>
 			<false/>
 			<key>DisableIoMapper</key>
+			<false/>
+			<key>DisableRtcChecksum</key>
 			<false/>
 			<key>DummyPowerManagement</key>
 			<false/>
@@ -999,6 +995,48 @@
 				<key>Path</key>
 				<string>OpenShell.efi</string>
 			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string>Shutdown</string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Comment</key>
+				<string>Shutdown</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>Shutdown</string>
+				<key>Path</key>
+				<string>ResetSystem.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string>ColdReset</string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Comment</key>
+				<string>ColdReset</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>ColdReset</string>
+				<key>Path</key>
+				<string>ResetSystem.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string>WarmReset</string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Comment</key>
+				<string>WarmReset</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>WarmReset</string>
+				<key>Path</key>
+				<string>ResetSystem.efi</string>
+			</dict>
 		</array>
 	</dict>
 	<key>NVRAM</key>
@@ -1007,8 +1045,6 @@
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<dict>
-				<key>DefaultBackgroundColor</key>
-				<data>AAAAAA==</data>
 				<key>UIScale</key>
 				<data>AQ==</data>
 			</dict>
@@ -1017,11 +1053,13 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100</string>
+				<string>keepsyms=1 debug=0x100 igfxfw=2 igfxagdc=0 igfxonln=1</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>emgtSGFuczoyNTI=</data>
+				<key>security-mode</key>
+				<string>none</string>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -1067,6 +1105,19 @@
 	</dict>
 	<key>UEFI</key>
 	<dict>
+		<key>APFS</key>
+		<dict>
+			<key>EnableJumpstart</key>
+			<true/>
+			<key>HideVerbose</key>
+			<true/>
+			<key>JumpstartHotPlug</key>
+			<true/>
+			<key>MinDate</key>
+			<integer>0</integer>
+			<key>MinVersion</key>
+			<integer>0</integer>
+		</dict>
 		<key>Audio</key>
 		<dict>
 			<key>AudioCodec</key>
@@ -1089,9 +1140,7 @@
 		<key>Drivers</key>
 		<array>
 			<string>HfsPlus.efi</string>
-			<string>ApfsDriverLoader.efi</string>
 			<string>OpenRuntime.efi</string>
-			<string>MemoryAllocation.efi</string>
 			<string>OpenCanopy.efi</string>
 		</array>
 		<key>Input</key>
@@ -1140,7 +1189,7 @@
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
 		</dict>
-		<key>Protocols</key>
+		<key>ProtocolOverrides</key>
 		<dict>
 			<key>AppleAudio</key>
 			<false/>
@@ -1153,6 +1202,8 @@
 			<key>AppleImageConversion</key>
 			<false/>
 			<key>AppleKeyMap</key>
+			<false/>
+			<key>AppleRtcRam</key>
 			<false/>
 			<key>AppleSmcIo</key>
 			<true/>
@@ -1186,6 +1237,8 @@
 			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>
+		<key>ReservedMemory</key>
+		<array/>
 	</dict>
 </dict>
 </plist>
