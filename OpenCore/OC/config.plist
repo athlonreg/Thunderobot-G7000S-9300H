@@ -383,7 +383,7 @@
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<integer>66</integer>
+				<integer>77</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1D,0x6)/Pci(0x0,0x1)</key>
 			<dict>
@@ -403,6 +403,8 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>CQClPg==</data>
+				<key>AAPL02,override-no-connect</key>
+				<data>AP///////wAJ0eR4RVQAABAcAQOANR54Lq9FqVRQnCUVUFSla4DRwIHAgQCBgKnAswABAQEBAjqAGHE4LUBYLEUADyghAAAeAAAA/wBLNEowMTg5NjAxOQogAAAA/QAyTB5TEQAKICAgICAgAAAA/ABCZW5RIEdXMjQ3MAogATM=</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
 				<key>enable-hdmi-dividers-fix</key>
@@ -429,8 +431,6 @@
 				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 630 (Mobile)</string>
-				<key>AAPL02,override-no-connect</key>
-				<data>AP///////wAJ0eR4RVQAABAcAQOANR54Lq9FqVRQnCUVUFSla4DRwIHAgQCBgKnAswABAQEBAjqAGHE4LUBYLEUADyghAAAeAAAA/wBLNEowMTg5NjAxOQogAAAA/QAyTB5TEQAKICAgICAgAAAA/ABCZW5RIEdXMjQ3MAogATM=</data>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -1058,8 +1058,6 @@
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>emgtSGFuczoyNTI=</data>
-				<key>security-mode</key>
-				<string>none</string>
 			</dict>
 		</dict>
 		<key>Block</key>

@@ -35,7 +35,6 @@ DefinitionBlock("", "SSDT", 2, "ACDT", "I2C-TPXX", 0)
     External(_SB.PCI0.TP7G, IntObj)
     
     // I2C Config
-    External (_SB.PCI0.GPI0._HID, MethodObj)
     External (_SB_.PCI0.I2C0.XMCN, MethodObj)
     External (_SB_.PCI0.I2C0.XSCN, MethodObj) 
     External (USTP, FieldUnitObj)
@@ -51,15 +50,6 @@ DefinitionBlock("", "SSDT", 2, "ACDT", "I2C-TPXX", 0)
         If (_OSI ("Darwin"))
         {
             TPDT = 0
-            Method (XXEN, 0, NotSerialized)
-            {
-                If ((\_SB.PCI0.GPI0._HID() == "INT344B") || (\_SB.PCI0.GPI0._HID() == "INT345D"))
-                {
-                    Return (One)
-                }
-
-                Return (Zero)
-            }
 
             Method (PKGX, 3, Serialized)
             {
@@ -89,11 +79,6 @@ DefinitionBlock("", "SSDT", 2, "ACDT", "I2C-TPXX", 0)
                     Return (PKGX (SSH0, SSL0, SSD0))
                 }
 
-                If (\XXEN ())
-                {
-                    Return (PKGX (0x01B0, 0x01FB, 0x1E))
-                }
-
                 Return (PKGX (0x03F2, 0x043D, 0x62))
             }
             ElseIf (CondRefOf (\_SB.PCI0.I2C0.XSCN))
@@ -114,11 +99,6 @@ DefinitionBlock("", "SSDT", 2, "ACDT", "I2C-TPXX", 0)
                 If (((CondRefOf (FMH0) && CondRefOf (FML0)) && CondRefOf (FMD0)))
                 {
                     Return (PKGX (FMH0, FML0, FMD0))
-                }
-
-                If (\XXEN ())
-                {
-                    Return (PKGX (0x48, 0xA0, 0x1E))
                 }
 
                 Return (PKGX (0x0101, 0x012C, 0x62))
@@ -233,7 +213,6 @@ DefinitionBlock("", "SSDT", 2, "ACDT", "I2C-TPXX", 0)
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Return (ConcatenateResTemplate (SBFB, SBFG)) // Working mode: GPIO
-                // Return (ConcatenateResTemplate (SBFB, SBFI)) // Working mode: APIC
             }
         }
     }
