@@ -4,6 +4,23 @@
 
 #### OpenCore更新记录
 
+- 2020-05-05
+
+    1. 更新OpenCore至0.5.8官方发布版
+    2. 更新OpenCore GUI的资源
+    3. ApfsDriverLoader模块集成到OpenCore中
+    4. 配置中添加了关机ColdReset和WarmReset菜单
+    5. 更新WhateverGreen至1.3.9
+    6. 更新VoodooPS2至2.1.4
+    7. 更新VoodooI2C至2.4.2
+    8. 更新VoodooInput至1.0.5
+    9. 更新VirtualSMC至1.1.3
+    10. 更新Lilu至1.4.4
+    11. 更新NVMeFix
+    12. 更新AppleALC至1.4.9
+    13. 更新CPUFriend
+    14. 更新NoTouchID
+
 - 2020-04-27
 
     1. 更新OC引导到4月27号开发版（详细更新内容请查看OC官方的git提交）
@@ -23,6 +40,11 @@
 </br>
 
 #### Clover更新记录
+
+- 2020-05-05
+
+    1. 将CLOVER更新为5115
+    2. 其它更新参考OpenCore部分
 
 - 2020-04-27
 
