@@ -4,6 +4,8 @@
 
 其它说明：由于本机OpenCore引导已经较为完善，且出于各种原因，经过慎重考虑后，决定以后将不再对本机的Clover引导提供更新支持
 
+关于蓝牙无法加载或引导进系统慢/卡进度：有可能是蓝牙驱动（IntelBluetoothFirmware.kext和IntelBluetoothInjector.kext）导致的，1.0.3的蓝牙驱动使用了新的依赖固件，如果你遇到了蓝牙无法加载或进系统慢/卡进度等问题，可以尝试回退蓝牙驱动版本（蓝牙驱动：https://github.com/zxystd/IntelBluetoothFirmware/releases）。
+
 `
 - 2020-04-27：EFI已经趋于稳定，没什么大问题以后仅仅只更新官方的Release版驱动以及引导文件。
 
