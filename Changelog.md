@@ -11,7 +11,7 @@
 ```
 - 2020-04-27：EFI已经趋于稳定，没什么大问题以后仅仅只更新官方的Release版驱动以及引导文件。
 
-- 2020-05-05：AppleALC 1.4.9官方发布版合并了我提交的Thunderobot G7000S定制声卡（layout-id为77）
+- 2020-05-05：AppleALC 1.4.9官方发布版合并了我提交的 [Thunderobot G7000S 定制声卡（layout-id为77）](https://github.com/acidanthera/AppleALC/releases/1.4.9)
 
 #### OpenCore更新记录
 
