@@ -2,6 +2,8 @@
 
 - 注意：鲁大师会把无线网卡AC9462错误的识别成AC9560
 
+- **[EFI 更新日志](https://github.com/athlonreg/Thunderobot-G7000S-9300H/blob/master/Changelog.md)**
+
 ```
 Laptop model                Thunderobot G7000S  (Thunderobot 911MT)
 CPU                         Intel Core i5 9300H
@@ -13,7 +15,6 @@ Audio                       Realtek High Definition Audio (ALC269)
 Ethernet                    Realtek RTL8168H/8111H PCI Express Gigabit 
 Wireless network adapter    Wireless-AC 9462 
 ```
-
 
 # Credits（排名不分先后）
 
