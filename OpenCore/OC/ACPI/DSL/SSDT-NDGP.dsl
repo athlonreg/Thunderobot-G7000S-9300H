@@ -1,6 +1,8 @@
 //Disables DGPU
+#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "NDGP", 0)
 {
+#endif
     External(_SB.PCI0.PEG0.PEGP._OFF, MethodObj)
     
     Device(DGPU)
@@ -26,5 +28,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "NDGP", 0)
             }
         }
     }
+#ifndef NO_DEFINITIONBLOCK
 }
+#endif
 //EOF

@@ -15,6 +15,17 @@
 
 #### OpenCore更新记录
 
+- 2020-06-04
+    1. 更新OpenCore至0.5.9官方发布版
+    2. 更新Lilu至1.4.5
+    3. 更新WhateverGreen至1.4.0
+    4. 更新VoodooPS2至2.1.5
+    5. 更新VoodooI2C至2.4.2
+    6. 更新VoodooInput至1.0.6
+    7. 更新VirtualSMC至1.1.4
+    8. 更新AppleALC至1.5.0
+    9. 更新VirtualSMC至1.1.4
+
 - 2020-05-05
 
     1. 更新OpenCore至0.5.8官方发布版

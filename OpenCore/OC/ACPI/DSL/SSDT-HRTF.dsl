@@ -1,19 +1,19 @@
 //Fix HPET,RTC,TIMR
-DefinitionBlock ("", "SSDT", 2, "ACDT", "HRTF", 0)
+DefinitionBlock ("", "SSDT", 2, "ACDT", "HRTfix", 0)
 {
     External (_SB.PCI0.LPCB, DeviceObj)
     External (_SB.PCI0.LPCB.RTC, DeviceObj)
     External (_SB.PCI0.LPCB.TIMR, DeviceObj)
-    //External (HPAE, IntObj)
-    External (HPTE, IntObj)
+    External (HPAE, IntObj)
+    //External (HPTE, IntObj)
     
     //disable HPET
     Scope (\)
     {
         If (_OSI ("Darwin"))
         {
-            //HPAE =0
-            HPTE =0
+            HPAE =0
+            //HPTE =0
         }
     }
     
@@ -91,7 +91,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "HRTF", 0)
                     0x0070, 
                     0x0070, 
                     0x01, 
-                    0x08,
+                    0x02,
                     )
             })
             Method (_STA, 0, NotSerialized)
